@@ -5,115 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brows & Lashes Service</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Embedded CSS -->
-    <style>
-        /* Reset default browser styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS (Optional for specific customizations) -->
+    <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #f8f9fa;
         }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
+        #carousel .carousel-inner {
+            height: 400px;
         }
-
-        nav ul {
-            list-style: none;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 1rem;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        #carousel {
-            position: relative;
-            margin-top: 2rem;
-        }
-
-        .carousel-container {
-            display: flex;
-            overflow: hidden;
-        }
-
-        .carousel-image {
+        #carousel .carousel-item img {
             width: 100%;
-            height: auto;
-            transition: transform 1s ease-in-out;
+            height: 100%;
+            object-fit: cover;
         }
-
-        #services, #booking, #contact {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        #services h2, #booking h2, #contact h2 {
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 0.5rem 0;
-        }
-
-        .booking-button {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .booking-button:hover {
-            background-color: #555;
-        }
-
-        .social-media {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .social-media li {
-            margin: 0 1rem;
-        }
-
-        .social-media li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
         footer {
-            text-align: center;
-            padding: 1rem;
             background-color: #333;
             color: #fff;
+            padding: 1rem;
+            text-align: center;
             margin-top: 2rem;
         }
     </style>
@@ -122,30 +39,54 @@
 
     <!-- Navigation Bar -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Brows & Lashes</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#booking">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Carousel -->
-    <section id="carousel">
-        <div class="carousel-container">
-            <img src="https://placehold.co/1920x1080" alt="Brows & Lashes Image 1" class="carousel-image">
-            <img src="https://placehold.co/1920x1080" alt="Brows & Lashes Image 2" class="carousel-image">
-            <img src="https://placehold.co/1920x1080" alt="Brows & Lashes Image 3" class="carousel-image">
+    <section id="carousel" class="container mt-4">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Brows & Lashes Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Brows & Lashes Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Brows & Lashes Image 3">
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
+    <section id="services" class="container py-5 text-center">
+        <h2 class="mb-4">Our Services</h2>
         <p>We provide professional eyebrow and lash services, including:</p>
-        <ul>
+        <ul class="list-unstyled">
             <li>Eyebrow Shaping</li>
             <li>Classic Lash Extensions</li>
             <li>Volume Lash Extensions</li>
@@ -154,20 +95,20 @@
     </section>
 
     <!-- Booking Section -->
-    <section id="booking">
-        <h2>Book an Appointment</h2>
+    <section id="booking" class="container py-5 text-center">
+        <h2 class="mb-4">Book an Appointment</h2>
         <p>Schedule your next session easily through our Google Calendar:</p>
-        <a href="https://calendar.google.com" target="_blank" class="booking-button">Book Now</a>
+        <a href="https://calendar.google.com" target="_blank" class="btn btn-dark btn-lg">Book Now</a>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
+    <section id="contact" class="container py-5 text-center">
+        <h2 class="mb-4">Contact Us</h2>
         <p>Find us on social media:</p>
-        <ul class="social-media">
-            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li class="mx-3"><a href="https://facebook.com" target="_blank" class="text-dark">Facebook</a></li>
+            <li class="mx-3"><a href="https://instagram.com" target="_blank" class="text-dark">Instagram</a></li>
+            <li class="mx-3"><a href="https://twitter.com" target="_blank" class="text-dark">Twitter</a></li>
         </ul>
     </section>
 
@@ -176,20 +117,8 @@
         <p>&copy; 2025 Brows & Lashes Service. All rights reserved.</p>
     </footer>
 
-    <!-- Embedded JavaScript -->
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.carousel-image');
-        const totalImages = images.length;
-
-        function showNextImage() {
-            images[currentIndex].style.transform = 'translateX(-100%)';
-            currentIndex = (currentIndex + 1) % totalImages;
-            images[currentIndex].style.transform = 'translateX(0)';
-        }
-
-        setInterval(showNextImage, 3000);  // Switch image every 3 seconds
-    </script>
-
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
