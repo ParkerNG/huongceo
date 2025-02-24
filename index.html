@@ -33,9 +33,19 @@
             text-align: center;
             margin-top: 2rem;
         }
+        .language-selector {
+            text-align: center;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button class="btn btn-secondary" id="enBtn">English</button>
+        <button class="btn btn-secondary" id="viBtn">Tiếng Việt</button>
+    </div>
 
     <!-- Navigation Bar -->
     <header>
@@ -48,16 +58,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a>
+                            <a class="nav-link active" href="#home" id="homeLink">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
+                            <a class="nav-link" href="#services" id="servicesLink">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#booking">Booking</a>
+                            <a class="nav-link" href="#booking" id="bookingLink">Booking</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="#contact" id="contactLink">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -70,13 +80,13 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Brows & Lashes Image 1">
+                    <img src="https://picsum.photos/1920/1080" class="d-block w-100" alt="Brows & Lashes Image 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Brows & Lashes Image 2">
+                    <img src="https://picsum.photos/1920/1080" class="d-block w-100" alt="Brows & Lashes Image 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Brows & Lashes Image 3">
+                    <img src="https://picsum.photos/1920/1080" class="d-block w-100" alt="Brows & Lashes Image 3">
                 </div>
             </div>
         </div>
@@ -84,31 +94,45 @@
 
     <!-- Services Section -->
     <section id="services" class="container py-5 text-center">
-        <h2 class="mb-4">Our Services</h2>
-        <p>We provide professional eyebrow and lash services, including:</p>
+        <h2 class="mb-4" id="servicesTitleEN">Our Services</h2>
+        <h2 class="mb-4" id="servicesTitleVI" style="display:none;">Dịch Vụ Của Chúng Tôi</h2>
+        <p id="servicesDescriptionEN">We provide professional eyebrow and lash services, including:</p>
+        <p id="servicesDescriptionVI" style="display:none;">Chúng tôi cung cấp các dịch vụ chuyên nghiệp cho lông mày và lông mi, bao gồm:</p>
         <ul class="list-unstyled">
-            <li>Eyebrow Shaping</li>
-            <li>Classic Lash Extensions</li>
-            <li>Volume Lash Extensions</li>
-            <li>Lash Lifts & Tints</li>
+            <li id="service1EN">Eyebrow Shaping</li>
+            <li id="service1VI" style="display:none;">Tạo Hình Lông Mày</li>
+            <li id="service2EN">Classic Lash Extensions</li>
+            <li id="service2VI" style="display:none;">Dài Lông Mi Cổ Điển</li>
+            <li id="service3EN">Volume Lash Extensions</li>
+            <li id="service3VI" style="display:none;">Dài Lông Mi Volume</li>
+            <li id="service4EN">Lash Lifts & Tints</li>
+            <li id="service4VI" style="display:none;">Nâng Lông Mi & Tô Màu</li>
         </ul>
     </section>
 
     <!-- Booking Section -->
     <section id="booking" class="container py-5 text-center">
-        <h2 class="mb-4">Book an Appointment</h2>
-        <p>Schedule your next session easily through our Google Calendar:</p>
-        <a href="https://calendar.google.com" target="_blank" class="btn btn-dark btn-lg">Book Now</a>
+        <h2 class="mb-4" id="bookingTitleEN">Book an Appointment</h2>
+        <h2 class="mb-4" id="bookingTitleVI" style="display:none;">Đặt Lịch Hẹn</h2>
+        <p id="bookingDescriptionEN">Schedule your next session easily through our Google Calendar:</p>
+        <p id="bookingDescriptionVI" style="display:none;">Đặt lịch hẹn của bạn dễ dàng thông qua Google Calendar:</p>
+        <a href="https://calendar.google.com" target="_blank" class="btn btn-dark btn-lg" id="bookingButtonEN">Book Now</a>
+        <a href="https://calendar.google.com" target="_blank" class="btn btn-dark btn-lg" id="bookingButtonVI" style="display:none;">Đặt Lịch</a>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="container py-5 text-center">
-        <h2 class="mb-4">Contact Us</h2>
-        <p>Find us on social media:</p>
+        <h2 class="mb-4" id="contactTitleEN">Contact Us</h2>
+        <h2 class="mb-4" id="contactTitleVI" style="display:none;">Liên Hệ Với Chúng Tôi</h2>
+        <p id="contactDescriptionEN">Find us on social media:</p>
+        <p id="contactDescriptionVI" style="display:none;">Tìm chúng tôi trên mạng xã hội:</p>
         <ul class="list-unstyled d-flex justify-content-center">
-            <li class="mx-3"><a href="https://facebook.com" target="_blank" class="text-dark">Facebook</a></li>
-            <li class="mx-3"><a href="https://instagram.com" target="_blank" class="text-dark">Instagram</a></li>
-            <li class="mx-3"><a href="https://twitter.com" target="_blank" class="text-dark">Twitter</a></li>
+            <li class="mx-3"><a href="https://facebook.com" target="_blank" class="text-dark" id="facebookEN">Facebook</a></li>
+            <li class="mx-3"><a href="https://facebook.com" target="_blank" class="text-dark" id="facebookVI" style="display:none;">Facebook</a></li>
+            <li class="mx-3"><a href="https://instagram.com" target="_blank" class="text-dark" id="instagramEN">Instagram</a></li>
+            <li class="mx-3"><a href="https://instagram.com" target="_blank" class="text-dark" id="instagramVI" style="display:none;">Instagram</a></li>
+            <li class="mx-3"><a href="https://twitter.com" target="_blank" class="text-dark" id="twitterEN">Twitter</a></li>
+            <li class="mx-3"><a href="https://twitter.com" target="_blank" class="text-dark" id="twitterVI" style="display:none;">Twitter</a></li>
         </ul>
     </section>
 
@@ -120,5 +144,21 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Language Toggle JavaScript -->
+    <script>
+        const enBtn = document.getElementById('enBtn');
+        const viBtn = document.getElementById('viBtn');
+
+        enBtn.addEventListener('click', () => {
+            document.querySelectorAll('.en').forEach(element => element.style.display = 'block');
+            document.querySelectorAll('.vi').forEach(element => element.style.display = 'none');
+        });
+
+        viBtn.addEventListener('click', () => {
+            document.querySelectorAll('.vi').forEach(element => element.style.display = 'block');
+            document.querySelectorAll('.en').forEach(element => element.style.display = 'none');
+        });
+    </script>
 </body>
 </html>
