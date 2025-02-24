@@ -6,7 +6,117 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brows & Lashes Service</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    
+    <!-- Embedded CSS -->
+    <style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #carousel {
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: auto;
+            transition: transform 1s ease-in-out;
+        }
+
+        #services, #booking, #contact {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #services h2, #booking h2, #contact h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+        }
+
+        .booking-button {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .booking-button:hover {
+            background-color: #555;
+        }
+
+        .social-media {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .social-media li {
+            margin: 0 1rem;
+        }
+
+        .social-media li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -66,6 +176,20 @@
         <p>&copy; 2025 Brows & Lashes Service. All rights reserved.</p>
     </footer>
 
-    <script src="/scripts.js"></script>
+    <!-- Embedded JavaScript -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function showNextImage() {
+            images[currentIndex].style.transform = 'translateX(-100%)';
+            currentIndex = (currentIndex + 1) % totalImages;
+            images[currentIndex].style.transform = 'translateX(0)';
+        }
+
+        setInterval(showNextImage, 3000);  // Switch image every 3 seconds
+    </script>
+
 </body>
 </html>
